@@ -7,6 +7,6 @@ server.cpp: The server-side C++ program that reads the graph from db.csv, handle
 db.csv: A CSV file representing a graph as edges (pairs of vertices) used by the server to build the graph.
 
 ## Key Features:
-Client-Server Architecture: The client connects to the server using a TCP socket and sends a start and goal node. The server processes the request and returns the shortest path between the nodes.
-Caching: The server maintains a cache for the 10 most recent path requests, reducing the time needed for repeated requests.
-Multithreading: The server can handle multiple clients simultaneously, with each client served by a dedicated thread.
+- Client-Server Architecture: The client connects to the server using a TCP socket and sends a start and goal node. The server processes the request and returns the shortest path between the nodes.
+- Caching: The server maintains a cache for the 10 most recent path requests, reducing the time needed for repeated requests.
+- Multithreading: The server can handle multiple clients simultaneously, with each client served by a dedicated thread.
