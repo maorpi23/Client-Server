@@ -12,9 +12,28 @@ This project implements a client-server application that computes the shortest p
 - Multithreading: The server can handle multiple clients simultaneously, with each client served by a dedicated thread.
 
 ## Usage
-### Compile the server
+### Step 1: Compile the Server
 Navigate to the `server/` directory and compile the server-side code:
 ```
 cd server/
 g++ -o server server.cpp
+```
+### Step 2: Compile the Client
+Navigate to the `client/` directory and compile the client-side code:
+```
+cd client/
+g++ -o client client.cpp
+```
+
+### Step 3: Run the Server
+The server requires the graph file and a port number to listen on. Run the server from the server/ directory:
+```
+./server db.csv 8080
+```
+The server will now listen for client connections on port `8080`.
+
+### Step 4: Run the Client
+Once the server is running, run the client from the client/ directory, specifying the server IP, port, and two vertices to find the shortest path between them:
+```
+./client <server_ip> 8080 <v1> <v2>
 ```
